@@ -54,3 +54,23 @@ a {
     text-decoration: none;
   }
 
+
+  .mobile-only {
+  display: block; /* Exibe por padrão */
+}
+
+@media (min-width: 23.4375rem) {
+  .mobile-only {
+    display: none; /* Esconde em telas maiores */
+  }
+}
+
+.desktop-only {
+  display: none; /* Esconde por padrão */
+}
+
+@media (min-width: 48rem) {
+  .desktop-only {
+    display: block; /* Exibe apenas em telas grandes */
+  }
+}
