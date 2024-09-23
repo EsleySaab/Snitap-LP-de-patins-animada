@@ -12,6 +12,23 @@ section.hero {
     max-width: 40rem;
   }
 
+  @media (max-width: 23.4375rem) {
+    flex-direction: column-reverse; 
+    align-items: center; 
+
+    & h1 {
+      max-width: 100%; 
+      text-align: center;
+    }
+
+    & .buttons {
+      flex-direction: column; 
+      gap: 1rem; 
+      margin-top: 2rem;
+    }
+    
+  }
+
   & h1 div {
     display: inline-block;
     overflow: hidden;
@@ -20,26 +37,18 @@ section.hero {
     vertical-align: bottom;
   }
 
-  & h1 span:nth-child(1) {
-    color: var(--snitap-sky-mid);
-  }
-  & h1 span:nth-child(2) {
-    color: var(--snitap-joy-mid);
-  }
-  & h1 span:nth-child(3) {
-    color: var(--snitap-leaf-mid);
-  }
-  & h1 span:nth-child(4) {
-    color: var(--snitap-sky-mid);
-  }
-
   & h1 span {
     display: block;
     animation: slideUp 5s 2s infinite ease;
   }
 
-  /* buttons */
+  
+  & h1 span:nth-child(1) { color: var(--snitap-sky-mid); }
+  & h1 span:nth-child(2) { color: var(--snitap-joy-mid); }
+  & h1 span:nth-child(3) { color: var(--snitap-leaf-mid); }
+  & h1 span:nth-child(4) { color: var(--snitap-sky-mid); }
 
+ 
   & .buttons {
     display: flex;
     gap: 2rem;
@@ -50,7 +59,6 @@ section.hero {
       align-items: center;
       gap: 0.75rem;
       border-radius: 5rem;
-
       transition: scale 350ms;
 
       &.buy {
@@ -76,13 +84,6 @@ section.hero {
     }
   }
 
-  @media (max-width: 23.4375rem) {
-    & .buttons {
-      display: grid;
-      flex-direction: column;
-    }
-  }
-
   /* patins */
   & > div:nth-child(2) {
     display: block;
@@ -101,18 +102,17 @@ section.hero {
       width: 100%;
     }
 
+    /* Animations */
     & img[src*="ellipse"] {
       width: 94%;
       top: 3%;
       left: 3%;
-
       transform: translateX(200%);
       animation: slideIn 3s 200ms ease forwards;
     }
 
     & img[src*="patins"] {
       z-index: 1;
-
       transform: translateX(200%);
       animation: slideIn 3s ease forwards;
     }
@@ -121,7 +121,6 @@ section.hero {
       max-width: 5.5rem;
       top: 30%;
       z-index: 0;
-
       opacity: 0;
       transform: translateX(400%);
       animation: slideIn 2s 800ms ease both, appear 100ms 800ms both;
@@ -131,7 +130,6 @@ section.hero {
       max-width: 2.5rem;
       right: 0;
       bottom: 35%;
-
       transform: translateX(400%);
       animation: slideIn 2.2s 800ms ease both;
     }
@@ -142,7 +140,6 @@ section.hero {
   50% {
     transform: translateX(-20px);
   }
-
   100% {
     transform: translateX(0);
   }
@@ -155,74 +152,21 @@ section.hero {
 }
 
 @keyframes slideUp {
-  /* radical static */
-  0%,
-  22% {
-    transform: translateY(0);
-  }
-  /* divertida in */
-  23% {
-    transform: translateY(calc(-5rem - 15px));
-  }
-
-  25% {
-    transform: translateY(calc(-5rem + 10px));
-  }
-
-  27% {
-    transform: translateY(calc(-5rem - 5px));
-  }
-
-  29% {
-    transform: translateY(calc(-5rem + 5px));
-  }
-  /* divertida static */
-
-  33%,
-  55% {
-    transform: translateY(-5rem);
-  }
-
-  /* saudável in */
-  56% {
-    transform: translateY(calc(-10rem - 15px));
-  }
-
-  58% {
-    transform: translateY(calc(-10rem + 10px));
-  }
-
-  60% {
-    transform: translateY(calc(-10rem - 5px));
-  }
-
-  62% {
-    transform: translateY(calc(-10rem + 5px));
-  }
-
-  /* saudável static */
-  66%,
-  88% {
-    transform: translateY(-10rem);
-  }
-
-  /* radical in */
-  89% {
-    transform: translateY(calc(-15rem - 15px));
-  }
-
-  91% {
-    transform: translateY(calc(-15rem + 10px));
-  }
-
-  93% {
-    transform: translateY(calc(-15rem - 5px));
-  }
-
-  95% {
-    transform: translateY(calc(-15rem + 5px));
-  }
-  100% {
-    transform: translateY(-15rem);
-  }
+  0%, 22% { transform: translateY(0); }
+  23% { transform: translateY(calc(-5rem - 15px)); }
+  25% { transform: translateY(calc(-5rem + 10px)); }
+  27% { transform: translateY(calc(-5rem - 5px)); }
+  29% { transform: translateY(calc(-5rem + 5px)); }
+  33%, 55% { transform: translateY(-5rem); }
+  56% { transform: translateY(calc(-10rem - 15px)); }
+  58% { transform: translateY(calc(-10rem + 10px)); }
+  60% { transform: translateY(calc(-10rem - 5px)); }
+  62% { transform: translateY(calc(-10rem + 5px)); }
+  66%, 88% { transform: translateY(-10rem); }
+  89% { transform: translateY(calc(-15rem - 15px)); }
+  91% { transform: translateY(calc(-15rem + 10px)); }
+  93% { transform: translateY(calc(-15rem - 5px)); }
+  95% { transform: translateY(calc(-15rem + 5px)); }
+  100% { transform: translateY(-15rem); }
 }
+

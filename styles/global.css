@@ -27,6 +27,8 @@
   --text-lg: 2.5rem;
 
   --text-xl: 4rem;
+
+  --text-xl-mb: 4rem
 }
 
 html,
@@ -73,4 +75,11 @@ a {
   .desktop-only {
     display: block; /* Exibe apenas em telas grandes */
   }
+}
+
+@media (max-width: 23.4375rem) {
+& h1 {
+  font-size: var(--text-xl-mb);
+  line-height: 1.25;
+}
 }
