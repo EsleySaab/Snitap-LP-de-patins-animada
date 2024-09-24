@@ -7,7 +7,7 @@ footer {
   align-items: center;
   justify-content: space-between;
 
-  @media (max-width: 23.4375rem) {
+  @media (max-width: 26.875rem) {
     flex-direction: column;
   }
 
@@ -32,7 +32,7 @@ footer {
     display: flex;
     gap: 2rem;
 
-    @media (max-width: 23.4375rem) {
+    @media (max-width: 26.875rem) {
       flex-direction: column;
       align-items: center;
       gap: 1rem;
